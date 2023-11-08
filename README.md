@@ -36,6 +36,7 @@ node index.js
 
 ## Backend File Structure
 
+```bash
 backend/
 ├── controllers/
 │   ├── quizController.js
@@ -48,6 +49,7 @@ backend/
 ├── routes/
 │   ├── quizRoutes.js
 ├── index.js
+```
 
 ```bash
 ## cd to backend folder
@@ -62,6 +64,7 @@ npm start
 ```
 # Frontend File Structure
 
+```bash
 frontend/
 ├── public/
 │   ├── index.html
@@ -80,7 +83,7 @@ frontend/
 │   ├── index.js
 │   ├── setupTests.js
 ├── package.json
-
+```
 
 # NB:
 This example of a quiz using sqlite for simplicity, you can convert the db to your choice and connect to run it.
