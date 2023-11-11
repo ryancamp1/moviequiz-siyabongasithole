@@ -31,7 +31,7 @@ npm i
 ```
 ## Database Migration
 
-[Download the Database Seed File - quiz-data.json](db/quiz-data.json)
+[Download the Database Seed File - quiz-data.json](backend/db/quiz-data.json)
 
 ```bash
 
