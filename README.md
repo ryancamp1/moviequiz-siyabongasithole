@@ -51,6 +51,7 @@ node index.js
 
 ## Backend File Structure
 
+```bash
 backend/
 ├── controllers/
 │   ├── quizController.js
@@ -64,7 +65,6 @@ backend/
 │   ├── quizRoutes.js
 ├── index.js
 
-```bash
 
 ## cd to backend folder
 cd frontend
