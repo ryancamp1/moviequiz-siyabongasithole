@@ -77,7 +77,7 @@ npm i
 
 ```bash
 
-```
+
 frontend/
 ├── public/
 │   ├── index.html
@@ -97,7 +97,7 @@ frontend/
 │   ├── setupTests.js
 ├── package.json
 
-```bash
+
 
 # Run react app
 npm start
