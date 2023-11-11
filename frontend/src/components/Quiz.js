@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchQuizById, submitAnswers } from '../services/api';
 import Question from './Question';
-import Result from './Result';
 
 const Quiz = () => {
   const { quizId } = useParams();
@@ -76,7 +75,7 @@ const Quiz = () => {
         <div>Submitting your answers...</div>
       ) : (
         <div>
-          <h2>{quiz.title}</h2>
+          <h2>{quiz.name}</h2>
           <Question
             question={quiz.questions[currentQuestionIndex]}
             onAnswerSelect={handleAnswerSelect}

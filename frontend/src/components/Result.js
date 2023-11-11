@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
-import { calculateScore, formatScore } from '../utils/helper';
+import {  formatScore } from '../utils/helper';
 
 const Result = () => {
   const location = useLocation();

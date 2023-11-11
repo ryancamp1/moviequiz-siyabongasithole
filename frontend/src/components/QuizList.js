@@ -36,7 +36,7 @@ const QuizList = () => {
         {quizzes.map((quiz) => (
           <span key={quiz.id}>
             <Link id='start-button' to={`/quiz/${quiz.id}`}>
-              {quiz.title} - {quiz.description}
+              {quiz.name} 
             </Link>
           </span>
         ))}

@@ -1,12 +1,13 @@
 ## Web App Using Node as Backend And React as Front
 
-
-
-## Tech / Framework used | Node
+## Tech / Framework used
 #### DevDep:
+
 - CORS
 - Express
 - Sqlite3
+- Nodejs
+- React
 
 ## Tech / Framework used | React
 #### Built with:
@@ -27,6 +28,20 @@ cd backend
 # Install NPM
 npm i
 
+```
+## Database Migration
+
+[Download the Database Seed File - quiz-data.json](db/quiz-data.json)
+
+```bash
+
+## Above is the json file used to generate the DB
+
+## Run the migration File
+node db/migration.js
+
+# Wait for the migration to succeed
+
 # run the backend server to get the url for the post calls on your react app:
 node index.js
 
@@ -36,7 +51,6 @@ node index.js
 
 ## Backend File Structure
 
-```bash
 backend/
 ├── controllers/
 │   ├── quizController.js
@@ -45,26 +59,25 @@ backend/
 ├── models/
 │   ├── quiz.js
 │   ├── question.js
-│   ├── option.js
+│   ├── answer.js
 ├── routes/
 │   ├── quizRoutes.js
 ├── index.js
-```
 
 ```bash
+
 ## cd to backend folder
 cd frontend
 
 # Install NPM
 npm i
 
-# Run react app
-npm start
-
 ```
-# Frontend File Structure
+# Frontend File Structure - REACT
 
 ```bash
+
+```
 frontend/
 ├── public/
 │   ├── index.html
@@ -83,7 +96,11 @@ frontend/
 │   ├── index.js
 │   ├── setupTests.js
 ├── package.json
-```
+
+```bash
+
+# Run react app
+npm start
 
 # NB:
 This example of a quiz using sqlite for simplicity, you can convert the db to your choice and connect to run it.

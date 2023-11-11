@@ -1,7 +1,7 @@
 // quizController.js
 const Quiz = require('../models/quiz');
 const Question = require('../models/question');
-const Option = require('../models/option');
+const Answer = require('../models/answer');
 
 const quizController = {
   // Controller to get all quizzes
@@ -14,7 +14,7 @@ const quizController = {
     }
   },
 
-  // Controller to get questions and options for a specific quiz
+  // Controller to get questions and answers for a specific quiz
   async getQuestionsForQuiz(req, res) {
     try {
       const { quizId } = req.params;
@@ -26,8 +26,8 @@ const quizController = {
 
       const questions = await Question.getByQuizId(quizId);
       for (let question of questions) {
-        const options = await Option.getByQuestionId(question.id);
-        question.options = options;
+        const answers = await Answer.getByQuestionId(question.id);
+        question.answers = answers;
       }
       res.json({ title: quiz.title, questions });
     } catch (error) {
@@ -43,8 +43,8 @@ const quizController = {
       let score = 0;
 
       for (const answerId of userAnswers) {
-        const correctOption = await Option.getByIdAndCorrectness(answerId, true);
-        if (correctOption) {
+        const correctAnswer = await Answer.getByIdAndCorrectness(answerId, true);
+        if (correctAnswer) {
           score++;
         }
       }
